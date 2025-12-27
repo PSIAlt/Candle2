@@ -136,6 +136,9 @@ jobs:
   release:
     needs: [build_linux, build_win]
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
 
     steps:
       - name: Download Artifacts
